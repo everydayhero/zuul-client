@@ -4,10 +4,10 @@ require "excon"
 
 module Zuul
   module Client
-    def self.create_blueprint(token, blueprint)
-      Connection.new.post(
-        path: "/peter/api/v1/blueprints/#{token}",
-        body: blueprint,
+    def self.create_layer(layer_id, version, layer)
+      Connection.new.put(
+        path: "/peter/api/v1/layers/#{layer_id}/#{version}",
+        body: layer,
       )
     end
   end
