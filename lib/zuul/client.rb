@@ -1,5 +1,6 @@
 require "zuul/client/version"
 require "zuul/client/connection"
+require "zuul/client/errors"
 require "excon"
 
 module Zuul

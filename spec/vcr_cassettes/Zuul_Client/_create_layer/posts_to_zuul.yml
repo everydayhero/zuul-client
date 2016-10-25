@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:5000/peter/api/v1/layers/aba60788-8433-4aa6-853f-bc4b52db383e/1
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Token token=ff24a904b44dfe8d81938c6727f07270a8a5b0b177ae43e882e939d2198067a9cdc293d35567b219fed45c0e050ae33d7d62985ceffd67013d0fd632f0f18913
+      Content-type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - W/"8cf1ff0366bbcb2092faf27206990e74"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 73ea1c63-99a2-4122-a829-a88226b2fa44
+      X-Runtime:
+      - '0.067842'
+    body:
+      encoding: UTF-8
+      string: '{"id":69,"layer_id":"aba60788-8433-4aa6-853f-bc4b52db383e","number":1,"data":{}}'
+    http_version: 
+  recorded_at: Tue, 25 Oct 2016 00:15:01 GMT
+recorded_with: VCR 3.0.3
