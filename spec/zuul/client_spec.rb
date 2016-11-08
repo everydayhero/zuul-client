@@ -23,5 +23,17 @@ describe Zuul::Client do
           /The property '#\/' did not contain a required property of 'gift'/
           )
     end
+
+    it 'raises when zuul returns 409' do
+      version = 1
+      layer1 = '{"a": "b"}'
+      layer2 = '{"a": "c"}'
+      layer_id = '18317405-c52f-4e45-8785-f34bd7bd7949'
+
+      Zuul::Client.create_layer(layer_id, version, layer1)
+      expect {
+        Zuul::Client.create_layer(layer_id, version, layer2)
+      }.to raise_error(Zuul::Client::LayerConflict, /Cannot mutate layer/)
+    end
   end
 end

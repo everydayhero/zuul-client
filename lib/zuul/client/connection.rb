@@ -16,6 +16,8 @@ module Zuul
         @connection.put(options)
       rescue Excon::Errors::UnprocessableEntity => e
         raise UnprocessableEntity, e.response.body
+      rescue Excon::Errors::Conflict => e
+        raise LayerConflict, e.response.body
       end
 
       private
