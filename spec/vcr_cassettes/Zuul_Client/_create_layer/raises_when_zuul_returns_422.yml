@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: http://localhost:5000/peter/api/v1/layers/18317405-c52f-4e45-8785-f34bd7bd7948/1
+    uri: http://localhost:1800/peter/api/v1/layers/18317405-c52f-4e45-8785-f34bd7bd7948/1
     body:
       encoding: UTF-8
       string: '{"complete": true}'
@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 40f62de4-a995-4d15-9ecd-c8c3ca65b14c
+      - cf083390-f3ec-4ea9-887e-6a89973da7e4
       X-Runtime:
-      - '0.062378'
+      - '0.033362'
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"errors":["Data The property ''#/'' did not contain a required property
         of ''gift'' in schema /"]}'
     http_version: 
-  recorded_at: Tue, 25 Oct 2016 00:18:51 GMT
+  recorded_at: Tue, 08 Nov 2016 00:00:01 GMT
 recorded_with: VCR 3.0.3
